@@ -1,5 +1,5 @@
 {
-  "name": "food-planner",
+  "name": "node-typescript-starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "build": "npm run lint && tsc",
+    "build": "npm run lint:fix && tsc",
     "build:run": "npm run build && node ./dist/index.js",
     "build:run:watch": "nodemon -w src -x \"npm run build:run\" -e ts -i \"**/*.spec.ts\""
   },
