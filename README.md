@@ -43,3 +43,7 @@ Will run all tests in the project
 `npm run test:watch`
 
 Will run all tests in the project and rerun them whenever there is a change in the code
+
+### Important
+
+You can remove the `"@types/node": "^13.9.5"` dependency, however, this version of typescript does not like it when there are no dependencies and breaks the build, at least 1 dependency should exist
