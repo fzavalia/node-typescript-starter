@@ -9,7 +9,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "npm run lint && tsc",
-    "build:run": "npm run build && node ./dist/index.js"
+    "build:run": "npm run build && node ./dist/index.js",
+    "build:run:watch": "nodemon -w src -x \"npm run build:run\" -e ts -i \"**/*.spec.ts\""
   },
   "keywords": [],
   "author": "",
