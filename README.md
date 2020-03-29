@@ -40,7 +40,7 @@ All test files must end with the extension `*.spec.ts` for them to be detected
 
 `npm test`
 
-Will run all tests in the project
+Will run all tests in the project as well as collect code coverage inside the `./coverage` directory
 
 `npm run test:watch`
 
