@@ -18,13 +18,13 @@ Again, before executing the next command, replace \<my-app-name\> with the name 
 
 `rm -rf ./<my-app-name>/.git`
 
-## Development
+## Run
 
 All your code must be inside the `./src` folder.
 
-### Run
+### Development
 
-`npm run build:run:watch`
+`npm run start:watch`
 
 This command will do the following:
 
