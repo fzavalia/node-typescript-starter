@@ -1,5 +1,5 @@
 describe('foo', () => {
   it('bar', () => {
-    expect(0).toBe(0);
+    expect(1 + 2).toBe(3);
   });
 });

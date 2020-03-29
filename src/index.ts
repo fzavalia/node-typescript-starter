@@ -1,9 +1,24 @@
-import express from 'express';
+import redis from 'redis';
 
-const app = express();
+const client = redis.createClient();
 
-app.use(express.json());
-
-app.listen(8080, () => {
-  console.log('listening on :8080');
+client.on('error', (error) => {
+  console.error(error);
 });
+
+client.on('ready', () => {
+  console.log('ready');
+});
+
+client.set('fulano', 'detal', (...p) => {
+  console.log(p);
+  client.get('fulano', (...p2) => {
+    console.log(p2);
+  });
+});
+
+setInterval(() => {
+  client.set('fulano', 'detal', (...p) => {
+    console.log(p);
+  });
+}, 1000);
