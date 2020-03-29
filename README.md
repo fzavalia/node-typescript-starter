@@ -18,6 +18,8 @@ Again, before executing the next command, replace \<my-app-name\> with the name 
 
 `rm -rf ./<my-app-name>/.git`
 
+Lastly, run `npm install` to install required dependencies
+
 ## Run
 
 All your code must be inside the `./src` folder.
