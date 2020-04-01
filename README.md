@@ -16,7 +16,7 @@ Just click on the `use as template` button in github
 
 Run the following commands, don't forget to replace `<my-app-name>` with the name of your app.
 
-`$ git clone --depth=1 --branch=master git@github.com:fzavalia/node-typescript-starter.git <my-app-name>`
+`$ git clone --depth=1 --branch=master git@github.com:fzavalia/typescript-app-template.git <my-app-name>`
 `$ rm -rf ./<my-app-name>/.git`
 
 ## Development
