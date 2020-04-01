@@ -1,51 +1,42 @@
-# Node Typescript Starter
+# Typescript App Template
 
-## Description 
+Have your Typescript app running with:
 
-Initialize your typescript projects with ease.
+- `jest` for testing
+- `eslint` for linting with the `airbnb` style
+- `nodemon` for watching changes and rebuilding/restaring your app for fast development
 
-## Download
+## Usage
 
-Before executing the following command, replace \<my-app-name\> with whatever name you want for your app.
+### Easy way
 
-`git clone --depth=1 --branch=master git@github.com:fzavalia/node-typescript-starter.git <my-app-name>`
+Just click on the `use as template` button in github
 
-The repo was cloned with the least amount of history (thank to depth=1) so the download should have been fast.
+### Easy but with more steps way
 
-Now you must remove the current git versioning the cloned project  has so you can replace with one of your own.
+Run the following commands, don't forget to replace `<my-app-name>` with the name of your app.
 
-Again, before executing the next command, replace \<my-app-name\> with the name you provided before.
+`$ git clone --depth=1 --branch=master git@github.com:fzavalia/node-typescript-starter.git <my-app-name>`
+`$ rm -rf ./<my-app-name>/.git`
 
-`rm -rf ./<my-app-name>/.git`
-
-Lastly, run `npm install` to install required dependencies
-
-## Run
+## Development
 
 All your code must be inside the `./src` folder.
 
-### Development
+To run the app just call
 
-`npm run start:watch`
+`$ npm run start:watch`
 
-This command will do the following:
+This will:
 
 - Lint with the airbnb typescript linter and try to fix anything that is automatically fixable
 - Build the project into the `./dist` folder
 - Run the compiled files with `nodemon`, any changes detected later in the source files will cause `nodemon` to rebuild and rerun for faster development
 
-### Test
+To test the app run
 
-All test files must end with the extension `*.spec.ts` for them to be detected
+`npm test` or `npm run test:watch`
 
-`npm test`
+The first command will collect code coverage inside the `./coverage` directory
 
-Will run all tests in the project as well as collect code coverage inside the `./coverage` directory
-
-`npm run test:watch`
-
-Will run all tests in the project and rerun them whenever there is a change in the code
-
-### Important
-
-You can remove the `"@types/node": "^13.9.5"` dependency, however, this version of typescript does not like it when there are no dependencies and breaks the build, at least 1 dependency should exist
+The second will watch for changes and continually run tests
